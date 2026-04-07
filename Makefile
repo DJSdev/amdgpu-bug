@@ -22,7 +22,7 @@ download-models:
 	hf download QuantFactory/Llama-3.2-3B-Instruct-GGUF Llama-3.2-3B-Instruct.Q4_K_M.gguf && \
 	\
 	echo Downloading Gemma4 GUFF && \
-	hf download unsloth/gemma-4-31B-it-GGUF gemma-4-31B-it-Q8_0.gguf'
+	hf download unsloth/gemma-4-26B-A4B-it-GGUF gemma-4-26B-A4B-it-Q8_0.gguf'
 
 .venv:
 	uv sync
@@ -36,6 +36,4 @@ run-bench: .venv
 
 	docker restart llama-server
 	sleep 3
-	./bench.py --host http://localhost:8080 --model gemma-4-31B
-
-
+	./bench.py --host http://localhost:8080 --model gemma-4-26B-A4B
