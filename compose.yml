@@ -11,9 +11,9 @@ services:
       - /dev/kfd:/dev/kfd
       - /dev/dri:/dev/dri
     environment:
-      - HIP_VISIBLE_DEVICES=0,1
       # To only use models defined in models.ini
       - LLAMA_CACHE=/tmp/empty
+      - HIP_VISIBLE_DEVICES=0,1
     command:
       - "--models-max"
       - "1"
@@ -28,6 +28,4 @@ services:
       - "--sleep-idle-seconds"
       - "30"
       - "--jinja"
-      - "-sm"
-      - "layer"
     restart: unless-stopped

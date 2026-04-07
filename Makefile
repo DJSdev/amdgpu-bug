@@ -1,51 +1,41 @@
-.PHONY: start stop ollama-pull zip-models download-models
-
-COMFY_DIR = ./config/comfy-ui
-
-WORKFLOW_FILE = $(COMFY_DIR)/workflows/mopSDXL_api.json
-WORKFLOW_NODE_ID = $(shell jq -r 'to_entries[] | select(.value.class_type == "CLIPTextEncode") | .key' $(WORKFLOW_FILE) | head -n 1)
-
-WORKFLOW_EDIT_FILE = $(COMFY_DIR)/workflow/edit_workflow.json
-
-MODELS_DIR := ./
-#URL := http://blob-server.home:8880/comfyui_models.tar.gz
+.PHONY: start stop download-models
 
 start:
-	@
-	export COMFYUI_WORKFLOW_JSON=$$(cat $(WORKFLOW_FILE)); \
-	export COMFYUI_WORKFLOW_NODE_ID=$(WORKFLOW_NODE_ID); \
-	export COMFYUI_WORKFLOW_EDIT_JSON=[]; \
-	export COMFYUI_WORKFLOW_EDIT_NODE_ID=0; \
 	docker compose up -d
 
 stop:
-	@
-	export COMFYUI_WORKFLOW_JSON="{}"; \
-	export COMFYUI_WORKFLOW_NODE_ID="0"; \
-	export COMFYUI_WORKFLOW_EDIT_JSON=[]; \
-	export COMFYUI_WORKFLOW_EDIT_NODE_ID=0; \
+	docker compose stop
+
+delete:
 	docker compose down
 
-install-hf:
+download-models:
 	docker exec -it llama-server /bin/bash -c \
 	'apt update && \
 	apt install -y python3-venv && \
+	\
 	python3 -m venv .venv && \
 	source ./.venv/bin/activate && \
-	pip3 install huggingface_hub'
+	pip3 install huggingface_hub && \
+	\
+	echo Downloading Llama3.2 GGUF && \
+	hf download QuantFactory/Llama-3.2-3B-Instruct-GGUF Llama-3.2-3B-Instruct.Q4_K_M.gguf && \
+	\
+	echo Downloading Gemma4 GUFF && \
+	hf download unsloth/gemma-4-31B-it-GGUF gemma-4-31B-it-Q8_0.gguf'
 
-download-model:
-	docker exec -it llama-server /bin/bash -c \
-	'source ./.venv/bin/activate && \
-	echo Downloading $(MODEL) from $(REPO) && \
-	hf download $(REPO) $(MODEL)'
+.venv:
+	uv sync
 
-rm-ollama-models:
-	@for i in $$(ls ./config/ollama/modelfiles/); do docker exec -it ollama ollama rm $$i; done
+run-bench: .venv
+	@
+	# Restart to ensure 1st run is a cold start
+	docker restart llama-server
+	sleep 3
+	./bench.py --host http://localhost:8080 --model llama-3.2-3B:Q4_K_M
 
-#zip-models:
-#	tar -I pigz -cvf comfyui_models.tar.gz ./config/comfy-ui/models
+	docker restart llama-server
+	sleep 3
+	./bench.py --host http://localhost:8080 --model gemma-4-32B
 
-#download-models:
-#	@echo "Downloading and updating ComfyUI models"
-#	curl -L $(URL) | tar -xz --overwrite
+
