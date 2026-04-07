@@ -29,8 +29,8 @@ run-bench: .venv
 	# Restart to ensure 1st run is a cold start
 	docker restart llama-server
 	sleep 3
-	./bench.py --host http://localhost:8080 --model llama-3.2-3B:Q4_K_M
+	uv run ./bench.py --host http://localhost:8080 --model llama-3.2-3B:Q4_K_M
 
 	docker restart llama-server
 	sleep 3
-	./bench.py --host http://localhost:8080 --model gemma-4-26B-A4B
+	uv run ./bench.py --host http://localhost:8080 --model gemma-4-26B-A4B
