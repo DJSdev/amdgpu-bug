@@ -36,6 +36,6 @@ run-bench: .venv
 
 	docker restart llama-server
 	sleep 3
-	./bench.py --host http://localhost:8080 --model gemma-4-32B
+	./bench.py --host http://localhost:8080 --model gemma-4-31B
 
 
