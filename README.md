@@ -16,6 +16,5 @@
 
 # Extras
 
-- `make stop` - Stop the container
-- `make delete` - Delete the container, not the local model files
+- `make stop` - Remove the container (doesn't delete model files)
 - `rm -rf ./models` - Delete the local model files
