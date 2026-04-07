@@ -1,5 +1,6 @@
 # Pre-reqs
 
+- Machine w/ two AMD GPUs
 - Python
 - uv
 - docker
