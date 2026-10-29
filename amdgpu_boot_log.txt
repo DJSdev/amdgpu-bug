@@ -1,0 +1,147 @@
+[   22.966167] amdgpu: Virtual CRAT table created for CPU
+[   22.966210] amdgpu: Topology: Add CPU node
+[   22.966335] amdgpu 0000:03:00.0: enabling device (0006 -> 0007)
+[   22.966438] amdgpu 0000:03:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7551 0x1849:0x5413 0xC0).
+[   22.966461] amdgpu 0000:03:00.0: register mmio base: 0x50800000
+[   22.966463] amdgpu 0000:03:00.0: register mmio size: 524288
+[   22.970079] amdgpu 0000:03:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+[   22.970083] amdgpu 0000:03:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+[   22.970086] amdgpu 0000:03:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+[   22.970088] amdgpu 0000:03:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+[   22.970090] amdgpu 0000:03:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+[   22.970092] amdgpu 0000:03:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+[   22.970094] amdgpu 0000:03:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+[   22.970096] amdgpu 0000:03:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+[   22.970099] amdgpu 0000:03:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+[   22.970100] amdgpu 0000:03:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+[   22.970102] amdgpu 0000:03:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+[   22.970119] amdgpu 0000:03:00.0: Fetched VBIOS from VFCT
+[   22.970121] amdgpu 0000:03:00.0: [drm] ATOM BIOS: 113-APM107573-101
+[   22.992152] amdgpu 0000:03:00.0: Trusted Memory Zone (TMZ) feature not supported
+[   22.992190] amdgpu 0000:03:00.0: MEM ECC is active.
+[   22.992191] amdgpu 0000:03:00.0: SRAM ECC is not presented.
+[   22.992198] amdgpu 0000:03:00.0: RAS INFO: ras initialized successfully, hardware ability[101] ras_mask[101]
+[   22.992208] amdgpu 0000:03:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+[   22.992217] amdgpu 0000:03:00.0: VRAM: 32624M 0x0000008000000000 - 0x00000087F6FFFFFF (32624M used)
+[   22.992219] amdgpu 0000:03:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+[   22.992227] amdgpu 0000:03:00.0: [drm] Detected VRAM RAM=32624M, BAR=32768M
+[   22.992228] amdgpu 0000:03:00.0: [drm] RAM width 256bits GDDR6
+[   22.992435] amdgpu 0000:03:00.0:  32624M of VRAM memory ready
+[   22.992437] amdgpu 0000:03:00.0:  64331M of GTT memory ready.
+[   22.992461] amdgpu 0000:03:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+[   22.992504] amdgpu 0000:03:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000087D6B00000).
+[   22.993094] amdgpu 0000:03:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A000A00
+[   22.993401] amdgpu 0000:03:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.12 DEC: 9 VEP: 0 Revision: 15
+[   22.993487] amdgpu 0000:03:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+[   22.993488] amdgpu 0000:03:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+[   23.227585] amdgpu 0000:03:00.0: GECC is disabled, set amdgpu_ras_enable=1 to enable GECC in next boot cycle if needed
+[   23.233020] amdgpu 0000:03:00.0: RAP: optional rap ta ucode is not available
+[   23.233034] amdgpu 0000:03:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+[   23.233081] amdgpu 0000:03:00.0: smu driver if version = 0x0000002e, smu fw if version = 0x00000033, smu fw program = 0, smu fw version = 0x00684c00 (104.76.0)
+[   23.233095] amdgpu 0000:03:00.0: SMU driver if version not matched
+[   23.257217] amdgpu 0000:03:00.0: SMU is initialized successfully!
+[   23.258017] amdgpu 0000:03:00.0: [drm] Display Core v3.2.369 initialized on DCN 4.0.1
+[   23.258019] amdgpu 0000:03:00.0: [drm] DP-HDMI FRL PCON supported
+[   23.262342] amdgpu 0000:03:00.0: [drm] DMUB hardware initialized: version=0x0A000A00
+[   23.273939] snd_hda_intel 0000:03:00.1: bound 0000:03:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+[   23.274648] amdgpu 0000:03:00.0: [drm] DP-1: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+[   23.274749] amdgpu 0000:03:00.0: [drm] DP-2: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+[   23.274852] amdgpu 0000:03:00.0: [drm] DP-3: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+[   23.274944] amdgpu 0000:03:00.0: [drm] DP-4: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+[   23.275326] amdgpu 0000:03:00.0: program CP_MES_CNTL : 0x4000000
+[   23.275329] amdgpu 0000:03:00.0: program CP_MES_CNTL : 0xc000000
+[   23.284304] amdgpu: Virtual CRAT table created for GPU
+[   23.284418] amdgpu: Topology: Add GPU node [0x1002:0x7551]
+[   23.284428] amdgpu 0000:03:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 64
+[   23.284431] amdgpu 0000:03:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+[   23.284433] amdgpu 0000:03:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+[   23.284433] amdgpu 0000:03:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+[   23.284434] amdgpu 0000:03:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+[   23.284435] amdgpu 0000:03:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+[   23.284435] amdgpu 0000:03:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+[   23.284436] amdgpu 0000:03:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+[   23.284437] amdgpu 0000:03:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+[   23.284443] amdgpu 0000:03:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+[   23.379167] amdgpu: HMM registered 32624MB device memory
+[   23.382295] amdgpu 0000:03:00.0: Using BACO for runtime pm
+[   23.382676] amdgpu 0000:03:00.0: [drm] Registered 4 planes with drm panic
+[   23.382678] [drm] Initialized amdgpu 3.64.0 for 0000:03:00.0 on minor 1
+[   23.386444] amdgpu 0000:03:00.0: [drm] Cannot find any crtc or sizes
+[   23.400790] amdgpu 0000:06:00.0: enabling device (0006 -> 0007)
+[   23.400887] amdgpu 0000:06:00.0: initializing kernel modesetting (IP DISCOVERY 0x1002:0x7550 0x148C:0x2435 0xC0).
+[   23.400905] amdgpu 0000:06:00.0: register mmio base: 0x50600000
+[   23.400906] amdgpu 0000:06:00.0: register mmio size: 524288
+[   23.404002] amdgpu 0000:06:00.0: detected ip block number 0 <common_v1_0_0> (soc24_common)
+[   23.404004] amdgpu 0000:06:00.0: detected ip block number 1 <gmc_v12_0_0> (gmc_v12_0)
+[   23.404006] amdgpu 0000:06:00.0: detected ip block number 2 <ih_v7_0_0> (ih_v7_0)
+[   23.404007] amdgpu 0000:06:00.0: detected ip block number 3 <psp_v14_0_0> (psp)
+[   23.404008] amdgpu 0000:06:00.0: detected ip block number 4 <smu_v14_0_0> (smu)
+[   23.404009] amdgpu 0000:06:00.0: detected ip block number 5 <dce_v1_0_0> (dm)
+[   23.404010] amdgpu 0000:06:00.0: detected ip block number 6 <gfx_v12_0_0> (gfx_v12_0)
+[   23.404011] amdgpu 0000:06:00.0: detected ip block number 7 <sdma_v7_0_0> (sdma_v7_0)
+[   23.404012] amdgpu 0000:06:00.0: detected ip block number 8 <vcn_v5_0_0> (vcn_v5_0_0)
+[   23.404013] amdgpu 0000:06:00.0: detected ip block number 9 <jpeg_v5_0_0> (jpeg_v5_0_0)
+[   23.404014] amdgpu 0000:06:00.0: detected ip block number 10 <mes_v12_0_0> (mes_v12_0)
+[   23.404026] amdgpu 0000:06:00.0: Fetched VBIOS from VFCT
+[   23.404028] amdgpu 0000:06:00.0: [drm] ATOM BIOS: 113-EXT112333-100
+[   23.425689] amdgpu 0000:06:00.0: vgaarb: deactivate vga console
+[   23.425691] amdgpu 0000:06:00.0: Trusted Memory Zone (TMZ) feature not supported
+[   23.425726] amdgpu 0000:06:00.0: MEM ECC is not presented.
+[   23.425727] amdgpu 0000:06:00.0: SRAM ECC is not presented.
+[   23.425738] amdgpu 0000:06:00.0: vm size is 262144 GB, 4 levels, block size is 9-bit, fragment size is 9-bit
+[   23.425745] amdgpu 0000:06:00.0: VRAM: 16304M 0x0000008000000000 - 0x00000083FAFFFFFF (16304M used)
+[   23.425747] amdgpu 0000:06:00.0: GART: 512M 0x0000000000000000 - 0x000000001FFFFFFF
+[   23.425753] amdgpu 0000:06:00.0: [drm] Detected VRAM RAM=16304M, BAR=16384M
+[   23.425754] amdgpu 0000:06:00.0: [drm] RAM width 256bits GDDR6
+[   23.425828] amdgpu 0000:06:00.0:  16304M of VRAM memory ready
+[   23.425830] amdgpu 0000:06:00.0:  64331M of GTT memory ready.
+[   23.425847] amdgpu 0000:06:00.0: [drm] GART: num cpu pages 131072, num gpu pages 131072
+[   23.425897] amdgpu 0000:06:00.0: [drm] PCIE GART of 512M enabled (table at 0x00000083DAB00000).
+[   23.426444] amdgpu 0000:06:00.0: [drm] Loading DMUB firmware via PSP: version=0x0A000A00
+[   23.426771] amdgpu 0000:06:00.0: [VCN instance 0] Found VCN firmware Version ENC: 1.12 DEC: 9 VEP: 0 Revision: 15
+[   23.426862] amdgpu 0000:06:00.0: MES: vmid_mask_mmhub 0x0000ff00, vmid_mask_gfxhub 0x0000ff00
+[   23.426863] amdgpu 0000:06:00.0: MES: gfx_hqd_mask 0x000000fe, compute_hqd_mask 0x0000000c, sdma_hqd_mask 0x000000fc
+[   23.662911] amdgpu 0000:06:00.0: RAP: optional rap ta ucode is not available
+[   23.662919] amdgpu 0000:06:00.0: SECUREDISPLAY: optional securedisplay ta ucode is not available
+[   23.662954] amdgpu 0000:06:00.0: smu driver if version = 0x0000002e, smu fw if version = 0x00000033, smu fw program = 0, smu fw version = 0x00684c00 (104.76.0)
+[   23.662959] amdgpu 0000:06:00.0: SMU driver if version not matched
+[   23.689061] amdgpu 0000:06:00.0: SMU is initialized successfully!
+[   23.689860] amdgpu 0000:06:00.0: [drm] Display Core v3.2.369 initialized on DCN 4.0.1
+[   23.689862] amdgpu 0000:06:00.0: [drm] DP-HDMI FRL PCON supported
+[   23.694196] amdgpu 0000:06:00.0: [drm] DMUB hardware initialized: version=0x0A000A00
+[   24.020428] amdgpu 0000:06:00.0: [drm] REG_WAIT timeout 1us * 150000 tries - optc401_disable_crtc line:235
+[   24.024625] snd_hda_intel 0000:06:00.1: bound 0000:06:00.0 (ops amdgpu_dm_audio_component_bind_ops [amdgpu])
+[   24.025424] amdgpu 0000:06:00.0: [drm] DP-5: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+[   24.025562] amdgpu 0000:06:00.0: [drm] DP-6: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+[   24.025647] amdgpu 0000:06:00.0: [drm] DP-7: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+[   24.052022] amdgpu 0000:06:00.0: [drm] HDMI-A-1: PSR support 0, DC PSR ver -1, sink PSR ver 0 DPCD caps 0x0 su_y_granularity 0
+[   24.052388] amdgpu 0000:06:00.0: program CP_MES_CNTL : 0x4000000
+[   24.052390] amdgpu 0000:06:00.0: program CP_MES_CNTL : 0xc000000
+[   24.061736] amdgpu: Virtual CRAT table created for GPU
+[   24.061986] amdgpu: Topology: Add GPU node [0x1002:0x7550]
+[   24.061995] amdgpu 0000:06:00.0: SE 4, SH per SE 2, CU per SH 8, active_cu_number 64
+[   24.061998] amdgpu 0000:06:00.0: ring gfx_0.0.0 uses VM inv eng 0 on hub 0
+[   24.061999] amdgpu 0000:06:00.0: ring comp_1.0.0 uses VM inv eng 1 on hub 0
+[   24.062000] amdgpu 0000:06:00.0: ring comp_1.1.0 uses VM inv eng 4 on hub 0
+[   24.062001] amdgpu 0000:06:00.0: ring comp_1.0.1 uses VM inv eng 7 on hub 0
+[   24.062001] amdgpu 0000:06:00.0: ring comp_1.1.1 uses VM inv eng 8 on hub 0
+[   24.062002] amdgpu 0000:06:00.0: ring sdma0 uses VM inv eng 9 on hub 0
+[   24.062003] amdgpu 0000:06:00.0: ring sdma1 uses VM inv eng 10 on hub 0
+[   24.062003] amdgpu 0000:06:00.0: ring vcn_unified_0 uses VM inv eng 0 on hub 8
+[   24.062004] amdgpu 0000:06:00.0: ring jpeg_dec uses VM inv eng 1 on hub 8
+[   24.110235] amdgpu: HMM registered 16304MB device memory
+[   24.113142] amdgpu 0000:06:00.0: Using BACO for runtime pm
+[   24.113958] amdgpu 0000:06:00.0: [drm] Registered 4 planes with drm panic
+[   24.113960] [drm] Initialized amdgpu 3.64.0 for 0000:06:00.0 on minor 2
+[   24.119392] amdgpu 0000:06:00.0: [drm] Failed to setup vendor infoframe on connector HDMI-A-1: -22
+[   24.139454] fbcon: amdgpudrmfb (fb0) is primary device
+[   24.139458] amdgpu 0000:06:00.0: [drm] fb0: amdgpudrmfb frame buffer device
+[   24.944366] amdgpu 0000:06:00.0: [drm] REG_WAIT timeout 1us * 150000 tries - optc401_disable_crtc line:235
+[   24.999107] audit: type=1400 audit(1776495684.725:202): apparmor="ALLOWED" operation="open" class="file" profile="Xorg" name="/opt/amdgpu/lib/x86_64-linux-gnu/libdrm.so.2.125.0" pid=1569 comm="Xorg" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[   24.999117] audit: type=1400 audit(1776495684.725:203): apparmor="ALLOWED" operation="file_mmap" class="file" profile="Xorg" name="/opt/amdgpu/lib/x86_64-linux-gnu/libdrm.so.2.125.0" pid=1569 comm="Xorg" requested_mask="rm" denied_mask="rm" fsuid=0 ouid=0
+[   25.018684] audit: type=1400 audit(1776495684.745:205): apparmor="ALLOWED" operation="open" class="file" profile="Xorg" name="/opt/amdgpu/lib/x86_64-linux-gnu/libdrm_amdgpu.so.1.125.0" pid=1569 comm="Xorg" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[   25.018697] audit: type=1400 audit(1776495684.745:206): apparmor="ALLOWED" operation="file_mmap" class="file" profile="Xorg" name="/opt/amdgpu/lib/x86_64-linux-gnu/libdrm_amdgpu.so.1.125.0" pid=1569 comm="Xorg" requested_mask="rm" denied_mask="rm" fsuid=0 ouid=0
+[   25.289922] audit: type=1400 audit(1776495685.016:207): apparmor="ALLOWED" operation="open" class="file" profile="Xorg" name="/opt/amdgpu/lib/x86_64-linux-gnu/libdrm_radeon.so.1.125.0" pid=1569 comm="Xorg" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[   25.289941] audit: type=1400 audit(1776495685.016:208): apparmor="ALLOWED" operation="file_mmap" class="file" profile="Xorg" name="/opt/amdgpu/lib/x86_64-linux-gnu/libdrm_radeon.so.1.125.0" pid=1569 comm="Xorg" requested_mask="rm" denied_mask="rm" fsuid=0 ouid=0
+[   25.296289] audit: type=1400 audit(1776495685.022:209): apparmor="ALLOWED" operation="open" class="file" profile="Xorg" name="/opt/amdgpu/share/libdrm/amdgpu.ids" pid=1569 comm="Xorg" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[   25.301622] audit: type=1400 audit(1776495685.028:210): apparmor="ALLOWED" operation="open" class="file" profile="Xorg" name="/opt/amdgpu/share/libdrm/amdgpu.ids" pid=1569 comm="Xorg" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
